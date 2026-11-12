@@ -280,7 +280,7 @@
     const dots = S.map((_, j) => `<button type="button" class="tg-dot${j === i ? ' on' : ''}" data-tg="${j}" aria-label="${j + 1}"></button>`).join('');
     return `<header class="pl-dh tg-h"><span class="pl-k">${esc(tr('tK', { i: i + 1, n, t: name.toUpperCase() }))}</span>` +
       `<button type="button" class="s3-x tg-x" data-a="tclose" aria-label="${esc(tr('close'))}">×</button></header>` +
-      `<div class="tg-b"><div class="tg-img"><img src="/static/tour/${img}.jpg" alt=""></div>` +
+      `<div class="tg-b"><div class="tg-img"><img src="/static/tour/${typeof currentLang !== 'undefined' && currentLang === 'en' ? 'en/' : ''}${img}.jpg" alt=""></div>` +
       `<div class="tg-tx"><h2>${esc(title)}</h2><ol>${pts.map(p => `<li>${esc(p)}</li>`).join('')}</ol>${extra}` +
       (i === n - 1 ? `<div class="tg-sup">${CUP}<div><span>${esc(tr('tSup'))}</span><button type="button" class="tg-sup-a" data-a="tsup">${esc(tr('tSupLink'))}</button></div></div>` +
         '<p class="tg-credit">PRODUCED AND DESIGNED BY <b>MATTIA COLOMBO</b></p>' : '') + `</div></div>` +

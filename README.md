@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="static/tour/home.jpg" width="820" alt="Tessera home">
+  <img src="static/tour/en/home.jpg" width="820" alt="Tessera home">
 </p>
 
 ---
@@ -33,10 +33,10 @@ Everything runs **locally**: your games and progress stay in a file on your comp
 
 | | |
 | --- | --- |
-| **01 · Game** — Stockfish rates every move (brilliant, best, inaccuracy, mistake, blunder) and points out the key moments, with the evaluation graph and the engine lines. | <img src="static/tour/game.jpg" width="400"> |
-| **02 · Openings** — your repertoire as cards, branches and lines. Study a line move by move, then drill it with spaced repetition. | <img src="static/tour/openings.jpg" width="400"> |
-| **03 · Stats** — six plain questions about your last 30 games compared with the 30 before: am I improving, what should I work on, which tactics do I miss, how are my openings going. | <img src="static/tour/stats.jpg" width="400"> |
-| **05 · Puzzle** — positions where you went wrong in your own games, rebuilt as puzzles: find the move you missed. | <img src="static/tour/puzzle.jpg" width="400"> |
+| **01 · Game** — Stockfish rates every move (brilliant, best, inaccuracy, mistake, blunder) and points out the key moments, with the evaluation graph and the engine lines. | <img src="static/tour/en/game.jpg" width="400"> |
+| **02 · Openings** — your repertoire as cards, branches and lines. Study a line move by move, then drill it with spaced repetition. | <img src="static/tour/en/openings.jpg" width="400"> |
+| **03 · Stats** — six plain questions about your last 30 games compared with the 30 before: am I improving, what should I work on, which tactics do I miss, how are my openings going. | <img src="static/tour/en/stats.jpg" width="400"> |
+| **05 · Puzzle** — positions where you went wrong in your own games, rebuilt as puzzles: find the move you missed. | <img src="static/tour/en/puzzle.jpg" width="400"> |
 
 The interface comes in Italian and English, with a light theme (Lattice) and a dark theme (Night).
 
@@ -109,6 +109,8 @@ allenamento: i momenti in cui la partita è girata, le aperture che giochi, su c
 puzzle presi dai tuoi errori.
 
 Funziona **in locale**: partite e progressi restano in un file sul tuo computer.
+
+<p align="center"><img src="static/tour/home.jpg" width="820" alt="Tessera, home in italiano"></p>
 
 ### Cosa fa
 

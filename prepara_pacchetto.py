@@ -5,7 +5,7 @@ Cosa mette nella cartella  Tessera_amico  (e nello zip):
   • Stockfish (versione AVX2 + versione compatibile, se presenti)
   • il database delle aperture (openings_cache.json e i file a–e.tsv)
   • un config.json NUOVO: nessun username, Stockfish cercato nella cartella dell'app
-  • LEGGIMI.txt
+  • LEGGIMI.txt + README.txt (inglese)
 
 Cosa NON mette mai: il tuo chess_reviewer.db (partite, analisi, puzzle, progressi),
 il tuo config.json, .env (chiave OpenAI), backup, .git, cartelle di lavoro.
@@ -87,6 +87,56 @@ NOTE
 """
 
 
+README_EN = """TESSERA
+=======
+
+HOW TO START
+1. Unzip this folder anywhere (e.g. Documents). You can move it later,
+   but keep all the files together: the app, Stockfish and the rest must stay
+   in the same folder.
+2. Double-click {exe}.
+   If Windows shows "Windows protected your PC": "More info" -> "Run anyway".
+   A black window opens (it is the app's engine): keep it open while you use the app.
+3. Your browser opens at http://localhost:5000
+   On first launch, type your chess.com username: the app imports your games
+   from the last 3 months, analyzes them with Stockfish and builds your openings.
+   It takes a few minutes, but you can already use it.
+
+HOW IT WORKS
+- Top right there is a blinking ?: open it, it is a 6-step guide.
+- "PLAYER" at the top: change username and the app imports that player's games.
+- Night / Lattice switches the theme, IT / EN the language.
+
+SUPPORT TESSERA
+Tessera is free and open source. If you find it useful, you can buy me a coffee:
+   https://paypal.me/MattiaColombo284
+(also from the side menu, "Support").
+Source code and updates: https://github.com/grassopher03ux/tessera
+
+TO CLOSE
+Close the browser tab and the black window.
+
+CONNECT THE AI (optional)
+Written comments on moves and opening explanations use OpenAI,
+with your own API key (paid, created at platform.openai.com).
+1. Open Notepad and write a single line, with no spaces and no quotes:
+       OPENAI_API_KEY=sk-your-key
+2. File -> Save as -> choose THIS folder (where {exe} is),
+   "Save as type": All files (*.*), "File name": .env
+   (it must be called exactly .env, not .env.txt)
+3. Close and reopen the app: in the top bar "NO AI" becomes "AI".
+The key stays only on your PC. Without .env the app works the same,
+just without the AI comments.
+
+NOTES
+- Stockfish is already included (two versions: on older PCs the compatible one is used automatically).
+- Your games and progress stay in this folder, in the file chess_reviewer.db.
+  Do not delete it if you want to keep them.
+- Tessera is free software (GPL-3.0): see LICENSE. Credits and licenses for Stockfish,
+  python-chess, fonts and pieces are in CREDITS.md.
+"""
+
+
 def fail(msg):
     print('\n  ERRORE: ' + msg)
     sys.exit(1)
@@ -144,6 +194,7 @@ def main():
     # 4. config nuovo e istruzioni
     (OUT / 'config.json').write_text(json.dumps(CONFIG, indent=2, ensure_ascii=False), encoding='utf-8')
     (OUT / 'LEGGIMI.txt').write_text(LEGGIMI.format(exe=exe.name), encoding='utf-8')
+    (OUT / 'README.txt').write_text(README_EN.format(exe=exe.name), encoding='utf-8')
     print('  config.json    nuovo, senza username')
     for n in ('LICENSE', 'CREDITS.md'):                 # licenza GPL-3.0 e crediti (servono con Stockfish)
         if (APP / n).is_file():
