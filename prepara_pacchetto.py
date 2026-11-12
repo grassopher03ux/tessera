@@ -1,6 +1,6 @@
 """prepara_pacchetto.py — crea una copia PULITA di Tessera da passare a un amico.
 
-Cosa mette nella cartella  Tessera_amico  (e nello zip):
+Cosa mette nella cartella  Tessera_amico  (e nello zip  Tessera.zip, da allegare alla release GitHub):
   • l'app (l'exe creato da build.bat, cartella dist)
   • Stockfish (versione AVX2 + versione compatibile, se presenti)
   • il database delle aperture (openings_cache.json e i file a–e.tsv)
@@ -20,7 +20,7 @@ from pathlib import Path
 APP = Path(__file__).resolve().parent
 DIST = APP / 'dist'
 OUT = APP / 'Tessera_amico'
-ZIP = APP / 'Tessera_amico.zip'
+ZIP = APP / 'Tessera.zip'                  # nome usato dal README per la release GitHub
 
 STOCKFISH = ['stockfish-windows-x86-64-avx2.exe', 'stockfish-windows-x86-64.exe']
 OPENINGS = ['openings_cache.json'] + [f'{l}.tsv' for l in 'abcde']
@@ -215,7 +215,7 @@ def main():
                 z.write(p, Path('Tessera') / p.relative_to(OUT))
     mb = ZIP.stat().st_size / 1e6
     print(f'\nFatto.\n  Cartella: {OUT}\n  Zip:      {ZIP}  ({mb:.0f} MB)\n')
-    print('Manda lo zip al tuo amico (es. WeTransfer o Google Drive).')
+    print('Allega Tessera.zip alla release su GitHub, oppure mandalo a un amico (WeTransfer, Google Drive).')
 
 
 if __name__ == '__main__':
