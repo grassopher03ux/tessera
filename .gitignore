@@ -1,0 +1,57 @@
+# ── Segreti ─────────────────────────────
+.env
+.env.*
+
+# ── Dati personali (si creano al primo avvio) ──
+config.json
+chess_reviewer.db
+chess_reviewer.db-*
+openings_cache.json
+
+# ── Build PyInstaller e pacchetti ───────
+build/
+dist/
+__pycache__/
+*.pyc
+Tessera_amico/
+ChessReview_amico/
+*.zip
+
+# ── Binari grandi (Stockfish va scaricato a parte) ──
+stockfish*.exe
+*.exe
+*.bin
+
+# ── Backup, materiale di lavoro e video ──
+_backup_*/
+design_handoff_chess_review/
+reel_instagram/
+Claude outputs/
+*.mp4
+chess.svg
+pop.up.svg
+themeB_chessboard.svg
+
+# ── File non più usati dall'app (da cancellare a mano) ──
+static/reel.js
+static_openings.json
+static/logo.svg
+static/icona_*.svg
+static/white_*.svg
+static/black_*.svg
+static/icon_before.svg
+static/icon_close.svg
+static/icon_end.svg
+static/icon_next.svg
+static/icon_start.svg
+static/icon_brilliant_move.svg
+static/icon_great_move.svg
+static/icon_good_move.svg
+static/icon_book_move.svg
+
+# ── Editor e strumenti locali ───────────
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

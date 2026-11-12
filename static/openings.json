@@ -1,0 +1,269 @@
+{
+  "black": {
+    "Caro-Kann Defense": [
+      {
+        "name": "Caro-Kann Defense, General",
+        "eco": "B10",
+        "pgn": "1. e4 c6",
+        "context": "Caro-Kann Defense: A solid opening for Black after 1.e4 c6. Black intends to challenge White's center with a timely ...d5, keeping a resilient structural layout."
+      },
+      {
+        "name": "Caro-Kann Defense: Two Knights Variation",
+        "eco": "B11",
+        "pgn": "1. e4 c6 2. Nc3 d5 3. Nf3",
+        "context": "Two Knights Variation: White develops both knights early to pressure d5, bypassing traditional main lines and opting for open, rapid piece-play."
+      },
+      {
+        "name": "Caro-Kann Defense: Advance Variation",
+        "eco": "B12",
+        "pgn": "1. e4 c6 2. d4 d5 3. e5",
+        "context": "Advance Variation: White grabs space by pushing e5. Black usually counters by activating the light-squared bishop outside the pawn chain with ...Bf5."
+      },
+      {
+        "name": "Caro-Kann Defense: Exchange Variation",
+        "eco": "B13",
+        "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5",
+        "context": "Exchange Variation: Liquidating the central tension early leads to a symmetrical pawn skeleton where piece positioning and minor imbalances dictate the middlegame."
+      },
+      {
+        "name": "Caro-Kann Defense: Panov-Botvinnik Attack",
+        "eco": "B14",
+        "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4",
+        "context": "Panov-Botvinnik Attack: White introduces dynamic asymmetry by striking at d5 with c4, often leading to an Isolated Queen's Pawn (IQP) setup with sharp attacking chances."
+      },
+      {
+        "name": "Caro-Kann Defense: Classical Variation",
+        "eco": "B18",
+        "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5",
+        "context": "Classical Variation: The traditional absolute main line where Black develops the light-squared bishop actively to f5 before securing the e6-d5 pawn skeleton."
+      }
+    ],
+    "Scandinavian Defense": [
+      {
+        "name": "Scandinavian Defense, General",
+        "eco": "B01",
+        "pgn": "1. e4 d5",
+        "context": "Scandinavian Defense: An immediate counter-strike in the center. Black forces open lines and quick development right from the very first move."
+      },
+      {
+        "name": "Scandinavian Defense: Main Line (3...Qa5)",
+        "eco": "B01",
+        "pgn": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5",
+        "context": "Main Line Qa5: Black accepts an early queen foray, using the a5 square as a safe anchor while executing a solid, light-squared pawn layout."
+      },
+      {
+        "name": "Scandinavian Defense: Gubinsky-Melts Variation (3...Qd6)",
+        "eco": "B01",
+        "pgn": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd6",
+        "context": "Gubinsky-Melts Variation: An active queen retreat to d6 that keeps pressure on White's d-pawn while preparing queenside castling or rapid central operations."
+      },
+      {
+        "name": "Scandinavian Defense: Pytel-Wittmann Variation (3...Qd8)",
+        "eco": "B01",
+        "pgn": "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8",
+        "context": "Pytel-Wittmann Variation: A total retreat of the queen to its starting square, prioritizing absolute safety and treating the opening like an asymmetrical counter-punch."
+      },
+      {
+        "name": "Scandinavian Defense: Modern Variation",
+        "eco": "B01",
+        "pgn": "1. e4 d5 2. exd5 Nf6",
+        "context": "Modern Variation: Black avoids bringing the queen out too early, opting instead to recapture the d5 pawn with a knight, maintaining dynamic flexibility."
+      },
+      {
+        "name": "Scandinavian Defense: Richter Gambit",
+        "eco": "B01",
+        "pgn": "1. e4 d5 2. exd5 Nf6 3. d4 Bg4",
+        "context": "Richter Gambit: An aggressive system where Black plays an early ...Bg4 pinning White's f3 defenses to disrupt developmental cohesion."
+      }
+    ],
+    "Modern Defense": [
+      {
+        "name": "Modern Defense, General",
+        "eco": "B06",
+        "pgn": "1. e4 g6",
+        "context": "Modern Defense: A hypermodern response allowing White a full center while Black plans a swift flank attack using the g7-fianchetto."
+      },
+      {
+        "name": "Modern Defense: King's Pawn Fianchetto",
+        "eco": "B06",
+        "pgn": "1. e4 g6 2. d4 Bg7",
+        "context": "King's Pawn Fianchetto: The cornerstone setup of the Modern Defense, maximizing the dark-squared bishop's influence down the long diagonal."
+      },
+      {
+        "name": "Modern Defense: Pseudo-Austrian Attack",
+        "eco": "B06",
+        "pgn": "1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. f4",
+        "context": "Pseudo-Austrian Attack: White advances three central pawns to smother Black's position, creating extreme space advantages balanced by structural targets for Black."
+      },
+      {
+        "name": "Modern Defense: 150 Attack (Be3/Qd2 setup)",
+        "eco": "B06",
+        "pgn": "1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. Be3 Nf6 5. Qd2",
+        "context": "150 Attack: White establishes a cohesive battery with Be3 and Qd2, plotting a direct kingside assault via an h4-h5 storm or trade of dark bishops."
+      }
+    ],
+    "Dutch Defense": [
+      {
+        "name": "Dutch Defense",
+        "eco": "A80",
+        "pgn": "1. d4 f5",
+        "context": "Dutch Defense: Black stakes a claim on e4 with the f-pawn and builds either the Classical set-up (…e6, …Be7, …d6) or the Stonewall (…e6, …d5, …c6, …Bd6), aiming for a kingside initiative."
+      },
+      {
+        "name": "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Modern Main Line",
+        "eco": "A99",
+        "pgn": "1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Qe8 8. b3"
+      },
+      {
+        "name": "Dutch Defense: Stonewall Variation, Modern Variation",
+        "eco": "A90",
+        "pgn": "1. d4 f5 2. c4 Nf6 3. g3 e6 4. Bg2 d5 5. Nf3 c6 6. O-O Bd6 7. b3 Qe7 8. Bb2"
+      },
+      {
+        "name": "Dutch Defense: Classical Variation",
+        "eco": "A96",
+        "pgn": "1. d4 f5 2. Nf3 Nf6 3. g3 e6 4. Bg2 Be7 5. O-O O-O 6. c4 d6 7. Nc3"
+      },
+      {
+        "name": "Dutch Defense: Staunton Gambit",
+        "eco": "A83",
+        "pgn": "1. d4 f5 2. e4 fxe4 3. Nc3 Nf6 4. Bg5 e6 5. Nxe4 Be7 6. Bxf6 Bxf6 7. Nf3"
+      }
+    ]
+  },
+  "white": {
+    "Vienna Opening": [
+      {
+        "name": "Vienna Opening, General",
+        "eco": "C25",
+        "pgn": "1. e4 e5 2. Nc3",
+        "context": "Vienna Opening: White develops the queenside knight to c3, keeping the f-pawn unblocked and retaining the option of an aggressive f4 thrust."
+      },
+      {
+        "name": "Vienna Gambit",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4",
+        "context": "Vienna Gambit: An aggressive flank gambit akin to the King's Gambit but with a protected c3 knight, generating severe attacking pressure on the f-file."
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit, Paulsen Attack (g3 Qe4+)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Qf3 Nc6 6. Bb5 Nxc3 7. dxc3 Qh4+ 8. g3 Qe4+"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit, Paulsen Attack (11. Be3)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Qf3 Nxc3 6. bxc3 Be7 7. d4 O-O 8. Bd3 Be6 9. Ne2 c5 10. O-O Nc6 11. Be3"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit, Paulsen Attack (9. Bc4)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Qf3 Nxc3 6. dxc3 Be6 7. Bf4 c5 8. O-O-O Nc6 9. Bc4"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit, Bardeleben Variation (bxc3 Be6)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Qf3 f5 6. d3 Nxc3 7. bxc3 Be6"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit, Bardeleben Variation (13. Rc1)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Qf3 f5 6. d3 Nxc3 7. bxc3 d4 8. Qg3 dxc3 9. Be2 Be6 10. Bf3 Nc6 11. Ne2 Qd7 12. Be3 Nb4 13. Rc1"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit (6. d3)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 d6 4. Nf3 Nc6 5. Bb5 Bd7 6. d3"
+      },
+      {
+        "name": "Vienna Game: Vienna Gambit (9. Bxf4)",
+        "eco": "C29",
+        "pgn": "1. e4 e5 2. Nc3 Nf6 3. f4 exf4 4. e5 Ng8 5. Nf3 d6 6. d4 dxe5 7. Qe2 Bb4 8. Qxe5+ Qe7 9. Bxf4"
+      },
+      {
+        "name": "Vienna Game: Stanley Variation, Meitner-Mieses Gambit",
+        "eco": "C25",
+        "pgn": "1. e4 e5 2. Nc3 Nc6 3. Bc4 Bc5 4. Qg4 Qf6 5. Nd5 Qxf2+ 6. Kd1 Kf8 7. Nh3 h5 8. Qg5 f6 9. Qg6 Rh6 10. Ne7"
+      },
+      {
+        "name": "Bishop's Opening: Vienna Hybrid (14. Kg1)",
+        "eco": "C24",
+        "pgn": "1. e4 e5 2. Nc3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. f4 d6 6. Nf3 Ng4 7. Ng5 O-O 8. f5 Bf2+ 9. Kf1 Ne3+ 10. Bxe3 Bxe3 11. h4 Bxg5 12. hxg5 Qxg5 13. Qh5 Qf4+ 14. Kg1"
+      },
+      {
+        "name": "Bishop's Opening: Vienna Hybrid (7. f5)",
+        "eco": "C24",
+        "pgn": "1. e4 e5 2. Nc3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. f4 d6 6. Nf3 O-O 7. f5"
+      },
+      {
+        "name": "Vienna Game: Max Lange Defense",
+        "eco": "C25",
+        "pgn": "1. e4 e5 2. Nc3 Nc6 3. Bc4 d6 4. d3"
+      }
+    ],
+    "Scotch Opening": [
+      {
+        "name": "Scotch Opening: General / Gambit Lines",
+        "eco": "C44",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4",
+        "context": "Scotch Gambit: White offers up the d4 pawn in exchange for sweeping piece activity, lightning-fast development, and early kingside mating patterns."
+      },
+      {
+        "name": "Scotch Opening: Goering Gambit",
+        "eco": "C44",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3",
+        "context": "Goering Gambit: A hyper-aggressive sacrifice where White gives up one or two pawns on c3 and b2 to gain wide open diagonals for the bishop pair."
+      },
+      {
+        "name": "Scotch Opening: Main Line",
+        "eco": "C45",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4",
+        "context": "Scotch Main Line: White recaptures on d4 immediately, staking a claim in the center and avoiding lengthy Ruy Lopez or Italian game theories."
+      },
+      {
+        "name": "Scotch Opening: Four Knights Variation",
+        "eco": "C47",
+        "pgn": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3",
+        "context": "Scotch Four Knights: A highly symmetrical and solid variation that focuses heavily on positional precision and structural imbalances."
+      }
+    ],
+    "Queen's Gambit": [
+      {
+        "name": "Queen's Gambit: Marshall Defense",
+        "eco": "D06",
+        "pgn": "1. d4 d5 2. c4 Nf6",
+        "context": "Marshall Defense: Black defends d5 with a knight. While playable, it often allows White to exchange on d5 and build a dominant pawn center."
+      },
+      {
+        "name": "Queen's Gambit: Chigorin Defense",
+        "eco": "D07",
+        "pgn": "1. d4 d5 2. c4 Nc6",
+        "context": "Chigorin Defense: An energetic, tactical counter-defense where Black blocks the c-pawn with ...Nc6, seeking immediate piece pressure against White's center."
+      },
+      {
+        "name": "Queen's Gambit: Albin Counter-Gambit",
+        "eco": "D08",
+        "pgn": "1. d4 d5 2. c4 e5",
+        "context": "Albin Counter-Gambit: Black strikes back immediately with 2...e5, muddying tactical waters and introducing complex trap-laden variations."
+      },
+      {
+        "name": "Queen's Gambit: Slav Defense",
+        "eco": "D10",
+        "pgn": "1. d4 d5 2. c4 c6",
+        "context": "Slav Defense: A rock-solid response. Black supports d5 with ...c6, ensuring a sturdy pawn shell while leaving the light-squared bishop unobstructed."
+      },
+      {
+        "name": "Queen's Gambit Accepted",
+        "eco": "D20",
+        "pgn": "1. d4 d5 2. c4 dxc4",
+        "context": "Queen's Gambit Accepted: Black surrenders the central d5 strongpoint temporarily, focusing on quick piece play and dynamic counterstrikes on the flank."
+      },
+      {
+        "name": "Queen's Gambit Declined: Orthodox Main Line",
+        "eco": "D50",
+        "pgn": "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5",
+        "context": "Orthodox Main Line: The classic pinnacle of Queen's Gambit theory. White creates a strong pin on f6 while Black prepares a safe, resilient kingside fortress."
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "stockfish_path": "stockfish-windows-x86-64-avx2.exe",
+  "depth": 18,
+  "openai_model": "gpt-4.1-mini",
+  "brilliant_enabled": true,
+  "review_multipv": 2,
+  "host": "127.0.0.1",
+  "chesscom_username": "",
+  "insights_scope": {
+    "time_classes": [
+      "rapid",
+      "blitz"
+    ],
+    "months": 3
+  }
+}

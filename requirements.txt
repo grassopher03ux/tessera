@@ -1,0 +1,6 @@
+flask
+flask-cors
+python-chess
+requests
+openai
+python-dotenv

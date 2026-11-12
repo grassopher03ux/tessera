@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tessera</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script>/* tema scelto, applicato prima del rendering (niente lampo) */try{if(localStorage.getItem("cr_skin")==="night")document.documentElement.dataset.theme="night"}catch(e){}</script>
+</head>
+<body>
+
+  <!-- ── SPLASH DI AVVIO (5 s, non saltabile): il logo Tessera si disegna ── -->
+  <div id="splash" role="img" aria-label="Tessera">
+    <svg class="spl-noise" aria-hidden="true"><filter id="splNoise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1"/></filter><rect width="100%" height="100%" filter="url(#splNoise)"/></svg>
+    <div class="spl-in">
+      <svg class="spl-mark" viewBox="-135 -135 270 315" aria-hidden="true"><polygon class="spl-shadow" points="0,-58 118,56 0,170 -118,56" fill="rgba(42,33,28,0.10)"/><g class="spl-drop"><g stroke-linejoin="round" stroke-width="6"><polygon class="spl-side" points="-110,0 0,110 0,150 -110,40" fill="#571013" stroke="#571013"/><polygon class="spl-side" points="0,110 110,0 110,40 0,150" fill="#43090c" stroke="#43090c"/><polygon points="0,-110 110,0 0,110 -110,0" fill="#6e0f12" stroke="#6e0f12"/></g><polygon class="spl-cell" points="0,-110 55,-55 0,0 -55,-55" fill="#8a1c14"/><polygon class="spl-cell" style="animation-delay:.12s" points="0,0 55,55 0,110 -55,55" fill="#8a1c14"/><path class="spl-edge" pathLength="100" d="M0,-110 L110,0 L0,110 L-110,0 Z" fill="none" stroke="#F7F1E7" stroke-width="2" stroke-linejoin="round"/></g><ellipse class="spl-kshadow" cx="0" cy="49" rx="44" ry="10" fill="rgba(30,4,6,0.35)"/><g transform="translate(-41.24,-62.3) scale(1.595)"><path class="spl-kn" pathLength="100" d="M18.12,11.78l-2.87-1.21s.96-2.23,12.98-4.77l5.67-5.28,3.38.34-.39,9.02,5.09,4.13.8,2.55c.14.46.37.9.65,1.29l7.77,10.6-.57,5.29-4.14,3.43-5.6-1.08s.13-3.38-4.39-5.67c0,0-3.12.89-5.98.25,0,0-1.02,3.88,6.87,10.63,7.89,6.74,7.63,15.84,7.63,15.84l.2,4.65-14.43,7.73c-1.16.62-2.52.76-3.79.38L.5,61.95v-2.9c0-2.2.33-4.38.99-6.48l.23-.74c.38-1.23.87-2.42,1.45-3.56.51-.98,1.04-1.95,1.59-2.9.51-.88,1.18-1.66,1.96-2.33l2.28-1.95c.63-.54,1.03-1.3,1.12-2.12v-2.38l-3.91,3.18v-9.1l3.05-1.59v-2.29l-2.74,1.46,1.15-7.44,3.44-.7,1.08-2.23-3.38.06,4.01-5.92,3.63.9,1.66-1.14Z" fill="#F7F1E7" stroke="#F7F1E7" stroke-width="0.9" stroke-linejoin="round"/><g class="spl-kcut"><path d="M48.34,29.96l-.12-.72-7.89-10.64-.03-.49c-.06-1-.46-1.95-1.13-2.7-.51-.58-1.11-1.09-1.76-1.52l-2.04-1.33c-.08-.05-.17-.1-.25-.14l-1.22-.56c-.24-.11-.39-.36-.36-.63l.56-6.27-2.39,1.55c-.35.23-.64.51-.88.85l-.67.94c-.17.24-.31.51-.41.78l-.47,1.3h-.25c-2.47-.05-4.93.51-7.13,1.65-3.58,1.86-8.11,5.67-9.65,13.24,0,0-1.24,5.89.71,13.58,1.96,7.7-3.24,14.53-3.24,14.53,0,0,4.96,9.21,19.14,13.89,0,0,2.52-.53,3.72-3.77,1.19-3.24,0-9.21,0-9.21,0,0-1.1-6.15-5.3-11.6-4.19-5.44-4.67-9.4-4.67-9.4,0,0-1.82-10.07,3.62-14.37l-.02,1.62c-.03,1.95.66,3.86,1.98,5.29,1.45,1.58,3.81,2.85,7.44,1.58,0,0,.59-.18,1.37.18.52.23,2.19,1.29,3.23,1.96.58.37,1.1.83,1.54,1.36.63.75,1.46,1.8,1.53,1.89.36.49.45.66.83.79l.61.21c.2.07.4.08.61.06l.72-.12.93-.79,1.12-1.07.24-1.93Z" fill="none" stroke="#6e0f12" stroke-width="1.2" stroke-linejoin="round"/><path d="M22.55,14.6c-.38.39-8.87,9.32-1.52,22.38,7.52,13.36,6.48,8.81,8.92,17.31.7,2.45-.92,10.05-.92,10.05-10.08-3.31-16.01-10.94-16.01-10.94,0,0,3.95-5.25,2.29-14.53-1.65-9.26-3.18-17.02,7.24-24.27Z" fill="none" stroke="#6e0f12" stroke-width="1.2" stroke-linejoin="round"/><path d="M38.94,20.83l-.02.02s-2.77-.79-3.6-1.31c-.82-.51-1.18-1.34-1.18-1.34l-.63-2.23,2.29.39s.86.26,1.45,1.03c.59.77,1.68,3.43,1.68,3.43Z" fill="#6e0f12"/></g></g></svg>
+      <div class="spl-name"><span><i style="animation-delay:0.00s">T</i></span><span><i style="animation-delay:0.06s">E</i></span><span><i style="animation-delay:0.12s">S</i></span><span><i style="animation-delay:0.18s">S</i></span><span><i style="animation-delay:0.24s">E</i></span><span><i style="animation-delay:0.30s">R</i></span><span><i style="animation-delay:0.36s">A</i></span></div>
+      <div class="spl-bar"><i></i></div>
+    </div>
+    <div class="spl-credit">PRODUCED AND DESIGNED BY <b>MATTIA COLOMBO</b></div>
+  </div>
+  <script src="splash.js"></script>
+
+  <!-- ── TOP BAR ─────────────────────────────────────────────────── -->
+  <header class="top">
+    <div class="brand-sq" aria-hidden="true">
+      <span class="brand-ic"><svg width="34" height="40" viewBox="-122 -122 244 284" aria-hidden="true"><polygon points="0,-58 118,56 0,170 -118,56" fill="rgba(42,33,28,0.10)"/><g><g stroke-linejoin="round" stroke-width="6"><polygon points="-110,0 0,110 0,150 -110,40" fill="#571013" stroke="#571013"/><polygon points="0,110 110,0 110,40 0,150" fill="#43090c" stroke="#43090c"/><polygon points="0,-110 110,0 0,110 -110,0" fill="#6e0f12" stroke="#6e0f12"/></g><polygon points="0,-110 55,-55 0,0 -55,-55" fill="#8a1c14"/><polygon points="0,0 55,55 0,110 -55,55" fill="#8a1c14"/><polygon points="0,-110 110,0 0,110 -110,0" fill="none" stroke="#F7F1E7" stroke-width="2" stroke-linejoin="round"/></g><ellipse cx="0" cy="49" rx="44" ry="10" fill="rgba(30,4,6,0.35)"/><g transform="translate(-41.24,-62.3) scale(1.595)"><path d="M18.12,11.78l-2.87-1.21s.96-2.23,12.98-4.77l5.67-5.28,3.38.34-.39,9.02,5.09,4.13.8,2.55c.14.46.37.9.65,1.29l7.77,10.6-.57,5.29-4.14,3.43-5.6-1.08s.13-3.38-4.39-5.67c0,0-3.12.89-5.98.25,0,0-1.02,3.88,6.87,10.63,7.89,6.74,7.63,15.84,7.63,15.84l.2,4.65-14.43,7.73c-1.16.62-2.52.76-3.79.38L.5,61.95v-2.9c0-2.2.33-4.38.99-6.48l.23-.74c.38-1.23.87-2.42,1.45-3.56.51-.98,1.04-1.95,1.59-2.9.51-.88,1.18-1.66,1.96-2.33l2.28-1.95c.63-.54,1.03-1.3,1.12-2.12v-2.38l-3.91,3.18v-9.1l3.05-1.59v-2.29l-2.74,1.46,1.15-7.44,3.44-.7,1.08-2.23-3.38.06,4.01-5.92,3.63.9,1.66-1.14Z" fill="#F7F1E7" stroke="#F7F1E7" stroke-width="0.9" stroke-linejoin="round"/><path d="M38.94,20.83l-.02.02s-2.77-.79-3.6-1.31c-.82-.51-1.18-1.34-1.18-1.34l-.63-2.23,2.29.39s.86.26,1.45,1.03c.59.77,1.68,3.43,1.68,3.43Z" fill="#6e0f12"/></g></svg></span>
+    </div>
+    <div class="brand">TESSERA</div>
+    <div class="crumbs" id="gameMeta"></div>
+    <div class="sp"></div>
+    <span class="pill" id="cacheChip" style="display:none">📦 da cache</span>
+    <button type="button" class="pill pbtn pl-chip" id="plChip" aria-haspopup="dialog" aria-expanded="false"></button>
+    <button type="button" class="pill pbtn tg-btn" id="tourBtn" aria-haspopup="dialog">?</button>
+    <span class="pill live" id="statusPill"><i id="statusDot" class="status-dot offline"></i><span id="statusText" data-i18n="loading">Caricamento...</span></span>
+    <button class="pill pbtn skin-btn" id="skinBtn" title="Tema: Lattice / Night"><i class="skin-dot"></i><span id="skinLabel">Lattice</span></button>
+    <button class="pill pbtn" id="langBtn" title="Switch language / Cambia lingua">IT</button>
+  </header>
+
+  <!-- ── RAIL DI NAVIGAZIONE (76px): moduli dell'app ───────────────── -->
+  <nav class="nav" id="navRail" aria-label="Moduli">
+    <button type="button" class="nav-i" id="navHome"><b>00</b><span data-i18n="navHome">Home</span></button>
+    <button type="button" class="nav-i" id="navGame"><b>01</b><span data-i18n="navGame">Game</span></button>
+    <button type="button" class="nav-i" id="learnBtn"><b>02</b><span data-i18n="navOpenings">Openings</span><em class="nav-badge" id="opBadge" hidden></em></button>
+    <button type="button" class="nav-i" id="statsBtn"><b>03</b><span data-i18n="navStats">Stats</span></button>
+    <button type="button" class="nav-i" id="gamesBtn"><b>04</b><span data-i18n="navArchive">Archive</span></button>
+    <button type="button" class="nav-i" id="pzBtn"><b>05</b><span data-i18n="navPuzzle">Puzzle</span><em class="nav-badge" id="pzBadge" hidden></em></button>
+    <div class="sp"></div>
+    <button type="button" class="nav-i nav-sup" id="supBtn" data-i18n-title="supTitle" title="Supporta Tessera"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c0 1 1 1.5 1 2.5M12 3.5c0 1 1 1.5 1 2.5"/></svg><span data-i18n="navSupport">Supporta</span></button>
+    <button type="button" class="nav-i" id="settingsBtn" data-i18n-title="settingsTitle" title="Impostazioni"><b>⚙</b><span data-i18n="navSettings">Settings</span></button>
+  </nav>
+
+  <!-- ── LEFT RAIL: partita, apertura, mosse ───────────────────────── -->
+  <aside class="rail left" aria-label="Partita">
+   <div class="rail-pane" id="railGame">
+    <h3 class="fold-h">
+      <button type="button" class="fold" id="gameFold" aria-expanded="true" aria-controls="gameActions" title="Mostra / nascondi il menu">
+        <span data-i18n="railGame">Partita</span><i class="chev" aria-hidden="true"></i>
+      </button>
+    </h3>
+    <div class="actions" id="gameActions">
+      <button class="act" id="importBtn"><span data-i18n="importPgn">Importa PGN</span></button>
+      <button class="act" id="analyzeGameBtn" disabled><span data-i18n="analyzeGame">Analizza partita</span></button>
+      <button class="act" id="summaryBtn" style="display:none"><span data-i18n="summaryBtn">Sintesi</span></button>
+    </div>
+
+    <h3><span data-i18n="railOpening">Apertura</span> <span id="openingEco"></span></h3>
+    <div class="opening-block">
+      <div class="opening-name" id="openingName"></div>
+      <div class="opening-sub" id="openingSub"></div>
+    </div>
+
+    <h3><span data-i18n="movesTitle">Mosse</span> <span id="moveCount"></span></h3>
+    <div id="moveList" class="move-list"></div>
+   </div>
+
+   <!-- Modulo aperture: repertorio + continuazioni -->
+   <div class="rail-pane" id="railOp">
+    <h3><span data-op="repertoire">Repertorio</span> <span id="opCount"></span></h3>
+    <div class="op-chapters" id="opChapters"></div>
+    <div class="op-actions">
+      <button class="btn btn-primary btn-wide" id="opReviewBtn">Ripassa</button>
+      <button class="btn btn-wide" id="opGamesBtn" data-op="gamesBtn">Partite chess.com</button>
+      <button class="btn btn-wide" id="opBackBtn" data-op="back">← Torna alla partita</button>
+    </div>
+    <h3><span data-op="continuations">Continuazioni</span> <span id="opKidsHead"></span></h3>
+    <div class="op-kids" id="opKids"></div>
+   </div>
+
+  </aside>
+
+  <!-- ── COLONNA STATISTICHE: indice + filtri/analisi ───────────────── -->
+  <aside class="scol" id="stColWrap" aria-label="Statistiche">
+    <div class="gz" id="stZ">
+      <div class="st-on"><span class="gc-k" data-st="onPage">On this page</span><div id="stNav"></div></div>
+      <button type="button" class="st-th" id="stToolsBtn"><span><b data-st="filtersTitle">Filters &amp; analysis</b><small id="stToolsSum"></small></span><i id="stChev">▾</i></button>
+      <div id="stTools" hidden>
+        <div class="st-tp"><span class="gc-k" data-st="whichGames">Which games</span>
+          <span id="stUser" hidden></span>
+          <div class="op-k" data-st="tc">Cadenza</div><div class="chips" id="stTc"></div>
+          <div class="op-k" data-st="color">Colore</div><div class="chips" id="stColor"></div>
+          <div class="op-k" data-st="window">Finestra</div><div class="chips" id="stWin"></div>
+        </div>
+        <div class="st-tp"><span class="gc-k" data-st="analysis">Analisi</span><div class="st-analysis" id="stAnalysis"></div></div>
+      </div>
+    </div>
+  </aside>
+  <div class="sd" id="stDrawer" hidden></div>
+
+  <!-- ── PAGINA STATISTICHE ─────────────────────────────────────────── -->
+  <main class="stats-page" id="statsPage">
+    <div class="stats-inner" id="statsBody"></div>
+  </main>
+
+  <!-- ── STAGE: scacchiera ──────────────────────────────────────────── -->
+  <main class="stage" id="stage">
+    <div class="hud" id="hudTL">
+      <div id="hudPos"></div>
+    </div>
+    <div class="hud" id="hudTR"></div>
+    <div class="hud" id="hudBL">
+      <div class="var-row" id="obVariationRow">
+        <span class="var-badge" id="varBadge" data-i18n="variationBadge" style="display:none">VARIANTE</span>
+        <button class="btn btn-xs" id="btnBackMain" data-i18n="backToMain" style="display:none">↩ Linea principale</button>
+      </div>
+    </div>
+    <!-- comandi scacchiera: solo icone, in colonna a destra; compaiono al passaggio del mouse -->
+    <div class="hud" id="hudBR">
+      <button class="btn ib" id="btnFlip" data-i18n-title="ctrlFlip" title="Ruota (F)" aria-label="Ruota">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 4.5H10a5.5 5.5 0 0 0-5.5 5.5v9"/><path d="M2 16.5l2.5 2.5L7 16.5"/><path d="M6.5 19.5H14a5.5 5.5 0 0 0 5.5-5.5V5"/><path d="M17 7.5L19.5 5 22 7.5"/></svg>
+      </button>
+      <button class="btn ib" id="btnZoom" title="Ingrandisci" aria-label="Ingrandisci" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <g class="exp"><path d="M5 5l14 14"/><path d="M5 10.5V5h5.5"/><path d="M19 13.5V19h-5.5"/></g>
+          <g class="cmp"><path d="M4.5 4.5l6 6"/><path d="M5.5 10.5h5v-5"/><path d="M19.5 19.5l-6-6"/><path d="M18.5 13.5h-5v5"/></g>
+        </svg>
+      </button>
+      <button class="btn ib" id="btnSound" data-i18n-title="ctrlSound" title="Suoni mosse on/off (M)" aria-label="Suoni" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 17.5V5.5l9-2v12"/><circle cx="7" cy="17.5" r="2.5"/><circle cx="16" cy="15.5" r="2.5"/><path class="strike" d="M3.5 3.5l17 17"/></svg>
+      </button>
+      <button class="btn ib" id="btnClearDrawings" data-i18n-title="ctrlClear" title="Cancella frecce (Esc)" aria-label="Cancella frecce">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 13h9"/><path d="M8.5 10.5L11 13l-2.5 2.5"/><circle cx="18" cy="7" r="2.3"/><path d="M15.7 10.7h4.6"/><path d="M16.3 10.7c0 3-1.4 5-1.9 8.3h7.2c-.5-3.3-1.9-5.3-1.9-8.3"/></svg>
+      </button>
+    </div>
+
+    <div class="op-toast" id="opToast" hidden></div>
+    <div class="op-gpane" id="opGamesPane">
+      <div class="oc-gh"><span class="gc-k" data-op="gRecent">Recent games</span><span class="gc-hint" id="opGamesCount"></span></div>
+      <div id="opGamesList"></div>
+    </div>
+
+    <div class="board-frame" id="boardFrame">
+
+      <div class="player-strip" id="playerTop">
+        <div class="prow"><i class="sw sw-black" id="swTop"></i><span id="nameTop" class="player-text">—</span><span class="acc" id="accTop" hidden></span><span class="cap" id="capTop"></span></div>
+      </div>
+
+      <div class="board-row">
+        <div class="eval-bar-wrap">
+          <div class="eval-label" id="evalLabelTop"></div>
+          <div class="eval-bar"><div class="eval-fill" id="evalFill" style="height:50%"></div><i class="eval-mid"></i></div>
+          <div class="eval-label" id="evalLabelBot"></div>
+        </div>
+        <div class="board-wrap">
+          <div class="rank-labels" id="rankLabels"></div>
+          <div class="board-col">
+            <div class="board-inner-wrap">
+              <div id="board" class="chess-board"></div>
+              <svg id="arrows" class="arrows-svg"></svg>
+              <div id="boardFx" class="board-fx"></div>
+            </div>
+            <div class="file-labels" id="fileLabels"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-strip" id="openingBar">
+        <div class="prow"><i class="sw sw-white" id="swBot"></i><span id="nameBot" class="player-text">—</span><span class="acc" id="accBot" hidden></span><span class="cap" id="capBot"></span></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── RIGHT RAIL: inspector motore ──────────────────────────────── -->
+  <aside class="rail right" id="panelEngine" aria-label="Motore">
+    <div class="ask ask-top">
+      <h4><span data-i18n="explainTitle">Commento</span> <span id="explainStatus"></span></h4>
+      <button class="btn btn-wide" id="btnExplain" disabled title="Commento OpenAI su questa posizione" data-i18n="explainBtn">Spiega la mossa</button>
+      <div class="explanation-box" id="explanationBox" style="display:none">
+        <div class="explanation-text" id="explanationText"></div>
+      </div>
+    </div>
+
+    <div class="insp">
+      <div class="op-insp" id="opInsp"></div>
+
+      <!-- Best move -->
+      <div class="best-move-box" id="bestMoveBox" style="display:none">
+        <div class="best-move-left">
+          <div class="best-move-label" data-i18n="bestMoveLabel">Mossa migliore</div>
+          <div class="best-move-san" id="bestMoveSan">—</div>
+        </div>
+        <div class="best-move-eval" id="bestMoveEval">—</div>
+      </div>
+
+      <div class="lines-head"><span data-i18n="linesTitle">Linee del motore</span> <span class="depth-inline" id="depthDisplay"></span></div>
+      <div id="engineLines" class="engine-lines">
+        <div class="engine-placeholder" data-i18n="enginePlaceholder">Naviga la partita per l'analisi</div>
+      </div>
+    </div>
+
+    <!-- navigazione partita (prima era nella timeline in basso) -->
+    <div class="ctrl">
+      <div class="ctrl-info">
+        <div class="now" id="plyNow">0 / 0</div>
+        <div class="sess" id="plySess"></div>
+      </div>
+      <div class="row">
+        <button class="btn" id="btnStart" data-i18n-title="ctrlStart" title="Inizio">⏮</button>
+        <button class="btn" id="btnPrev"  data-i18n-title="ctrlPrev"  title="Precedente (←)">◀</button>
+        <button class="btn" id="btnNext"  data-i18n-title="ctrlNext"  title="Successivo (→)">▶</button>
+        <button class="btn" id="btnEnd"   data-i18n-title="ctrlEnd"   title="Fine">⏭</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── COLONNA NARRATIVA (vista Game) ────────────────────────────── -->
+  <aside class="gcol" id="gameCol" aria-label="Revisione">
+    <div class="gz" id="gcZ">
+      <div class="gc-step" id="gcStep"></div>
+      <div class="gc-body" id="gcBody"></div>
+      <div class="gc-foot" id="gcFoot"></div>
+      <div class="gc-drawer" id="gcDrawer" hidden></div>
+    </div>
+  </aside>
+
+  <!-- ── COLONNA APERTURE (vista Openings) ───────────────────────────── -->
+  <aside class="ocol" id="opColWrap" aria-label="Aperture">
+    <div id="opCol" class="oc-root"></div>
+  </aside>
+  <section class="ohead" id="opHead" aria-label="Apertura"></section>
+  <section class="ofoot" id="opFoot"></section>
+  <aside class="orcol" id="opRight" aria-label="Percorso"></aside>
+  <main class="op-page" id="opPage" aria-label="Aperture"></main>
+
+  <!-- ── COLONNA PUZZLE (vista Puzzle) ───────────────────────────────── -->
+  <aside class="pcol" id="pzColWrap" aria-label="Puzzle">
+    <div class="gz" id="pzZ"><div id="pzCol" class="pz-root"></div></div>
+  </aside>
+
+  <!-- ── HOME ───────────────────────────────────────────────────────── -->
+  <main class="pg-page" id="homePage"><div class="hm-wrap">
+    <div class="hm-head"><div><span class="hm-date" id="hmDate"></span><span class="hm-hi" id="hmHi"></span></div>
+      <span class="hm-three"><span id="hmThree"></span></span></div>
+    <div class="hm-grid" id="homeBody"></div>
+  </div></main>
+
+  <!-- ── ARCHIVE + SETTINGS (pagine) ───────────────────────────────── -->
+  <main class="pg-page" id="archivePage"><div class="pg-wrap" id="archiveBody"></div></main>
+  <main class="pg-page" id="settingsPage"><div class="pg-wrap pg-set">
+    <div class="pg-head"><div><span class="pg-h1" data-ar="settings">Settings</span><span class="pg-sub" data-ar="setSub">Saved on this computer</span></div></div>
+    <section class="pg-sec"><div class="pg-sl"><b>01</b><span data-ar="eng">Engine</span><small data-ar="engDesc"></small></div>
+      <div class="pg-sc">
+        <div class="pg-box" id="setEngBox"><i class="status-dot offline" id="setEngDot"></i><b id="setEngTitle"></b><span id="setEngSub"></span></div>
+        <label class="pg-lab"><span data-ar="engPath">Stockfish path</span>
+          <span class="pg-in"><input type="text" id="sfPath" placeholder="C:\stockfish\stockfish.exe"><button class="gc-btn sm" id="setSfPath" data-ar="engSet">Set</button></span></label>
+        <div class="settings-msg" id="settingsMsg"></div>
+        <div class="pg-tiles" id="setTiles"></div>
+        <span class="pg-hint" data-ar="cfgNote"></span>
+      </div></section>
+    <section class="pg-sec"><div class="pg-sl"><b>02</b><span data-ar="ai">AI comments</span><small data-ar="aiDesc"></small></div>
+      <div class="pg-sc">
+        <div class="pg-box"><i class="status-dot offline" id="setAiDot"></i><b id="setAiTitle"></b><span id="setAiSub"></span></div>
+        <div class="key-status-bar" id="keyStatusBar" style="display:none"></div>
+        <span class="pg-p" data-ar="aiHow"></span>
+      </div></section>
+    <section class="pg-sec"><div class="pg-sl"><b>03</b><span data-ar="prefs">Preferences</span></div><div class="pg-sc" id="setPrefs"></div></section>
+  </div></main>
+
+  <!-- ── BOTTOM TIMELINE: navigazione + grafico valutazione ─────────── -->
+  <section class="tl" aria-label="Timeline partita">
+    <div class="tl-ctl" id="tlCtl">
+      <button type="button" class="tl-all" id="tlAll">All moves</button>
+      <div class="tl-nav">
+        <button type="button" id="tlPrev" data-i18n-title="ctrlPrev" title="Precedente (←)">◀</button>
+        <button type="button" id="tlNext" data-i18n-title="ctrlNext" title="Successivo (→)">▶</button>
+      </div>
+      <span class="tl-count" id="tlCount">0 / 0</span>
+    </div>
+    <div class="graph">
+      <div class="graph-legend"><span data-i18n="graphWhite">Bianco</span><span data-i18n="graphBlack">Nero</span></div>
+      <div class="hist" id="evalGraph"></div>
+    </div>
+    <div class="flow" id="opFlow"></div>
+    <div class="st-strip" id="stStrip"></div>
+  </section>
+
+  <!-- ── MODALS ───────────────────────────────────────────────────── -->
+
+  <!-- PGN Import -->
+  <div class="modal-bg" id="importModal">
+    <div class="dlg dlg-lg">
+      <div class="dlg-h"><span data-ar="impTitle">Import PGN</span><button class="modal-x" id="importClose">×</button></div>
+      <div class="dlg-b">
+        <textarea id="pgnInput" data-i18n-placeholder="pgnPlaceholder" placeholder="Incolla il PGN qui..."></textarea>
+        <div class="modal-error" id="pgnError"></div>
+        <span class="dlg-hint" data-ar="impHint"></span>
+      </div>
+      <div class="dlg-f">
+        <label class="gc-btn ter file-btn"><span data-ar="impOpen">Open .pgn file</span><input type="file" id="pgnFile" accept=".pgn,.txt" style="display:none"></label>
+        <span class="dlg-fr"><button class="gc-btn ter" id="importCancel" data-ar="impCancel">Cancel</button><button class="gc-btn pri" id="loadPgnBtn" data-ar="impLoad">Load and analyze</button></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete game -->
+  <div class="modal-bg" id="delModal">
+    <div class="dlg dlg-sm">
+      <div class="dlg-b"><span class="dlg-t" data-ar="delTitle">Delete this game?</span><span class="dlg-p" id="delText"></span></div>
+      <div class="dlg-f" style="justify-content:flex-end"><button class="gc-btn ter" id="delKeep" data-ar="delKeep">Keep it</button><button class="gc-btn danger" id="delDo" data-ar="delDo">Delete</button></div>
+    </div>
+  </div>
+
+  <!-- Full-game analysis progress -->
+  <div class="modal-bg" id="progressModal">
+    <div class="modal modal-sm">
+      <div class="modal-hdr"><h2 data-i18n="analyzingTitle">Analisi in corso...</h2></div>
+      <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-text" id="progressText">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary modal -->
+  <div class="modal-bg" id="summaryModal">
+    <div class="modal modal-md summary-card">
+      <div class="modal-hdr">
+        <h2 class="summary-title" data-i18n="summaryTitle">Sintesi della partita</h2>
+        <button class="modal-x" id="summaryClose">×</button>
+      </div>
+      <div class="summary summary-players">
+        <div><b id="summaryWhiteAcc">—</b><span id="summaryWhiteName">—</span></div>
+        <div><b id="summaryBlackAcc">—</b><span id="summaryBlackName">—</span></div>
+      </div>
+      <div class="summary-table">
+        <div class="summary-head"><span></span><span></span><span data-i18n="graphWhite">Bianco</span><span data-i18n="graphBlack">Nero</span></div>
+        <div id="summaryRows"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- chess.js in locale: l'app funziona anche offline / da exe -->
+  <script src="/static/chess-0.10.3.js"></script>
+  <script src="app.js"></script>
+  <script src="game.js"></script>
+  <script src="openings.js"></script>
+  <script src="insights.js"></script>
+  <script src="archive.js"></script>
+  <script src="home.js"></script>
+  <script src="puzzle.js"></script>
+  <script src="player.js"></script>
+
+</body>
+</html>

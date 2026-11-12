@@ -1,0 +1,3 @@
+Cinzel - Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel)
+Distribuito con licenza SIL Open Font License 1.1 (https://openfontlicense.org),
+la stessa del file OFL.txt in questa cartella.
